@@ -87,9 +87,9 @@ export default function Dashboard() {
         const dashboardRes = await fetch(`${API_BASE_URL}/api/dashboard`, { headers });
         const dashboardData = await dashboardRes.json();
         setDailyData({
-          caloriesConsumed: dashboardData.caloriesConsumed || 0,
+          caloriesConsumed: dashboardData.caloriesconsumed || 0,
           steps: dashboardData.steps || 0,
-          waterIntake: dashboardData.waterIntake || 0,
+          waterIntake: dashboardData.waterintake || 0,
           sleep: dashboardData.sleep || 0,
           mood: dashboardData.mood || 3,
         });
